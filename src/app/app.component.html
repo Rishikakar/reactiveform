@@ -26,8 +26,8 @@
                     <select class="form-control" name="country" id="" formControlName="country">
             <option value="IN">India</option>
             <option value="US">America</option>
-            <option value="AE">UAE</option>
-            <option value="AFRICA">AFRICA</option>
+            <option value="SL">Sri Lanka</option>
+            <option value="KOR">Korea</option>
           </select>
                 </div>
 
@@ -105,7 +105,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let user of userDetails">
+                    <tr *ngFor="let user of userDetails, let num =index">
                         <th scope="row">{{user.name}}</th>
                         <td>{{user.email}}</td>
                         <td>{{user.dob}}</td>
