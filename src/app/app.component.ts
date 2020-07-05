@@ -41,15 +41,17 @@ export class AppComponent {
       ]),
     })
   }
+  delete(index: number){
+    this.userDetails.splice(index, 1);
+  }
   submitForm(){
     console.log(this.userforms)
-    if(this.userforms.valid){
+   
        console.log(this.userforms.value);
        this.userDetails.push(this.userforms.value);
        console.log(this.userDetails);
-    }
+    
     console.log(this.userDetails)
-   }
-
+  }
 
 }

@@ -105,7 +105,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let user of userDetails, let num =index">
+                    <tr *ngFor="let user of userDetails">
                         <th scope="row">{{user.name}}</th>
                         <td>{{user.email}}</td>
                         <td>{{user.dob}}</td>
@@ -113,6 +113,16 @@
                         <td>{{user.country}}</td>
                         <td>{{user.maritialstatus}}</td>
                         <td>{{user.favfood}}</td>
+
+                        <select name="address" id="">
+                            <option *ngFor="let user of user.address">
+                              street:{{user.street}}, doorno: {{user.doorno}}, zipcode:{{user.zipcode}}
+                           </option>
+                          </select>
+
+                        <br/>
+                        <br/>
+                        <td><button (click)="delete(i)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
